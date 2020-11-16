@@ -1,2 +1,12 @@
-include ':app'
+include ':sources:features:filter'
+include ':sources:features:trailer'
+include ':sources:features:actor'
+include ':sources:features:details'
+include ':sources:features:main'
+include ':sources:features:splash'
+include ':sources:base:db'
+include ':sources:base:network'
+include ':sources:base:repo'
+include ':sources:base:core'
+include ':injector'
 rootProject.name = "MovieCatalogApp"

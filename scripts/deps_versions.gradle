@@ -1,0 +1,7 @@
+ext {
+    daggerVersion = '2.29.1'
+
+    dagger = "com.google.dagger:dagger:$daggerVersion"
+    daggerCompiler = "com.google.dagger:dagger-compiler:$daggerVersion"
+    daggerAnnotaionProcessor = "com.google.dagger:dagger-android-processor:$daggerVersion"
+}
