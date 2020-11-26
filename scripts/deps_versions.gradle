@@ -1,7 +1,33 @@
 ext {
     daggerVersion = '2.29.1'
+    retrofitVersion = '2.6.1'
+    loggingInterceptor = '4.9.0'
+    gson = '2.8.6'
+    okhttp = '4.9.0'
+    retrofitRxAdapter = "2.9.0"
+    rxJava = "2.2.20"
+    rxAndroid = "2.1.1"
 
+    //Dagger2
     dagger = "com.google.dagger:dagger:$daggerVersion"
     daggerCompiler = "com.google.dagger:dagger-compiler:$daggerVersion"
     daggerAnnotaionProcessor = "com.google.dagger:dagger-android-processor:$daggerVersion"
+
+    //Rx
+    rxJava = "io.reactivex.rxjava2:rxjava:$rxJava"
+    rxAndroid = "io.reactivex.rxjava2:rxandroid:$rxAndroid"
+
+    //Retrofit2
+    retrofit = "com.squareup.retrofit2:retrofit:$retrofitVersion"
+    rxJavaAdapter = "com.squareup.retrofit2:adapter-rxjava2:$retrofitVersion"
+    retrofitGsonConverter = "com.squareup.retrofit2:converter-gson:$retrofitVersion"
+
+    //LoggingInterceptor
+    loggingInterceptor = "com.squareup.okhttp3:logging-interceptor:$loggingInterceptor"
+
+    //Gson
+    gson = "com.google.code.gson:gson:$gson"
+
+    //OkHttp
+    okhttp = "com.squareup.okhttp3:okhttp:$okhttp"
 }

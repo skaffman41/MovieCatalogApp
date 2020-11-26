@@ -6,3 +6,4 @@
 /build
 /captures
 .externalNativeBuild
+/scripts/api_keys.gradle
