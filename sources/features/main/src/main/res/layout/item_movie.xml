@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="data"
+            type="ru.alexnimas.core_api.dto.Movie" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/movie_cv"
+            android:layout_width="100dp"
+            android:layout_height="150dp"
+            app:cardCornerRadius="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/movie_image"
+                srcUrl="@{data.imageUrl}"
+                android:layout_width="100dp"
+                android:layout_height="150dp"
+                android:scaleType="fitXY" />
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/movie_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:minLines="2"
+            android:text="@{data.movieTitle}"
+            android:textAlignment="center"
+            android:textColor="#c3c6cb"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="@id/movie_cv"
+            app:layout_constraintStart_toStartOf="@id/movie_cv"
+            app:layout_constraintTop_toBottomOf="@id/movie_cv" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
