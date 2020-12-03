@@ -5,6 +5,7 @@ import android.content.Context
 import dagger.BindsInstance
 import dagger.Component
 import ru.alexnimas.core_api.providers.AppProvider
+import ru.alexnimas.moviecatalogapp.App
 
 @Component(modules = [AppModule::class])
 interface AppComponent : AppProvider {
@@ -12,10 +13,10 @@ interface AppComponent : AppProvider {
 
         private var appComponent: AppProvider? = null
 
-        fun create(application: Application): AppProvider {
+        fun create(application: App): AppProvider {
             return appComponent ?: DaggerAppComponent
                 .builder()
-                .application(application.applicationContext)
+                .application(application)
                 .build().also {
                     appComponent = it
                 }
@@ -26,7 +27,7 @@ interface AppComponent : AppProvider {
     interface Builder {
 
         @BindsInstance
-        fun application(context: Context): Builder
+        fun application(context: App): Builder
 
         fun build(): AppComponent
     }

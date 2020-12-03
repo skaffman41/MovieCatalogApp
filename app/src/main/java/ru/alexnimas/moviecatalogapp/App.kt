@@ -1,11 +1,16 @@
 package ru.alexnimas.moviecatalogapp
 
-import android.app.Application
+import androidx.appcompat.app.AppCompatActivity
+import androidx.multidex.MultiDexApplication
 import ru.alexnimas.core_api.AppWithFacade
 import ru.alexnimas.core_api.ProvidersFacade
 import ru.alexnimas.moviecatalogapp.di.FacadeComponent
+import ru.alexnimas.sources.base.core.di.CurrentActivityProvider
 
-class App : Application(), AppWithFacade {
+class App : AppWithFacade, MultiDexApplication(), CurrentActivityProvider {
+
+    override var currentActivity: AppCompatActivity? = null
+
     override fun onCreate() {
         super.onCreate()
         (getFacade() as FacadeComponent).inject(this)

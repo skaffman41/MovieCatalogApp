@@ -1,12 +1,9 @@
 package ru.alexnimas.network.di
 
 import dagger.Component
-import ru.alexnimas.network.Api
-import ru.alexnimas.network.RemoteDataSource
+import ru.alexnimas.core_api.providers.NetworkProvider
 
 @Component(
-    modules = [NetworkModule::class, NetworkModuleBinds::class])
-interface NetworkComponent {
-    fun provideApi(): Api
-    fun provideRemoteDataSource(): RemoteDataSource
-}
+    modules = [NetworkModule::class]
+)
+interface NetworkComponent : NetworkProvider

@@ -8,7 +8,6 @@ include ':sources:features:main'
 include ':sources:features:splash'
 include ':sources:base:db'
 include ':sources:base:network'
-include ':sources:base:repo'
 include ':sources:base:core'
 include ':app'
 rootProject.name = "MovieCatalogApp"
