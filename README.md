@@ -16,7 +16,7 @@
   - RxJava
   - LiveData
   - Databinding
-  - Hilt
+  - Dagger
   - Room
   - Retrofit
   - Glide
