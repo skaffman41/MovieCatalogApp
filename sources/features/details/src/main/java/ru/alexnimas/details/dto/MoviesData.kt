@@ -1,4 +1,4 @@
-package ru.alexnimas.main.dto
+package ru.alexnimas.details.dto
 
 import ru.alexnimas.core_api.dto.Movie
 

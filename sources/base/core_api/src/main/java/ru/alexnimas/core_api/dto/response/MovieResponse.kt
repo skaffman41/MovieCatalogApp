@@ -3,6 +3,7 @@ package ru.alexnimas.core_api.dto.response
 import com.google.gson.annotations.SerializedName
 
 data class MovieResponse(
+    val id: Int? = null,
     @SerializedName("vote_count") var voteCount: Int? = null,
     @SerializedName("poster_path") var posterPath: String? = null,
     @SerializedName("backdrop_path") var backdropPath: String? = null,

@@ -6,25 +6,25 @@ import androidx.lifecycle.MutableLiveData
 import io.reactivex.Single
 import io.reactivex.rxkotlin.addTo
 import io.reactivex.schedulers.Schedulers
+import ru.alexnimas.core_api.coordinator.MainCoordinator
 import ru.alexnimas.core_api.dto.Movie
-import ru.alexnimas.main.data.RemoteDataSource
 import ru.alexnimas.main.dto.MoviesData
+import ru.alexnimas.main.repo.MainRepository
 import ru.alexnimas.sources.base.core.base.BaseViewModel
 import ru.alexnimas.sources.base.core.extensions.applyNetworkSchedulers
 import javax.inject.Inject
 
 
 class MainViewModel @Inject constructor(
-    private val remoteDataSource: RemoteDataSource
+    private val repository: MainRepository,
+    private val mainCoordinator: MainCoordinator
 ) : BaseViewModel() {
     val moviesData = MutableLiveData<MoviesData>()
 
     fun onMovieClicked(movie: Movie) {
-        val bundle = Bundle()
-//        movie.id?.let { id ->
-//            bundle.putInt("movie_id", id)
-////            navigate(bundle, Screen.MOVIE_DETAILS)
-//        }
+        movie.id?.let { id ->
+            mainCoordinator.toDetailsScreen(id)
+        }
     }
 
     override fun reInit(args: Bundle?) {
@@ -49,22 +49,22 @@ class MainViewModel @Inject constructor(
     }
 
     private fun getNowPlayingMovies(): Single<List<Movie>> {
-        return remoteDataSource.getNowPlayingMovies(1)
+        return repository.getNowPlayingMovies(1)
             .subscribeOn(Schedulers.io())
     }
 
     private fun getOnTheAirShows(): Single<List<Movie>> {
-        return remoteDataSource.getOnTheAirShows(1)
+        return repository.getOnTheAirShows(1)
             .subscribeOn(Schedulers.io())
     }
 
     private fun getPopular(): Single<List<Movie>> {
-        return remoteDataSource.getPopularMovies(1)
+        return repository.getPopularMovies(1)
             .subscribeOn(Schedulers.io())
     }
 
     private fun getTopRated(): Single<List<Movie>> {
-        return remoteDataSource.getTopRatedMovies(1)
+        return repository.getTopRatedMovies(1)
             .subscribeOn(Schedulers.io())
     }
 }

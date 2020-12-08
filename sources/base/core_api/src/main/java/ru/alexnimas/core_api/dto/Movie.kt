@@ -1,6 +1,7 @@
 package ru.alexnimas.core_api.dto
 
 data class Movie(
+    val id: Int?,
     val posterPath: String?,
     val originalName: String?,
     val title: String?

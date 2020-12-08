@@ -5,9 +5,21 @@
     app:startDestination="@id/splashFragment">
 
     <fragment
-        android:id="@+id/mainFragment"
-        android:name="ru.alexnimas.main.MoviesListFragment"
+        android:id="@+id/detailsFragment"
+        android:name="ru.alexnimas.details.MovieDetailsFragment"
         android:label="fragment_main">
+        <argument
+            android:name="id"
+            app:argType="integer" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="ru.alexnimas.main.MainFragment"
+        android:label="fragment_main">
+        <action
+            android:id="@+id/action_mainFragment_to_detailsFragment"
+            app:destination="@id/detailsFragment" />
     </fragment>
 
     <fragment

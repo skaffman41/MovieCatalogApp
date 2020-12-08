@@ -6,6 +6,7 @@ plugins {
 }
 
 apply from: "$project.rootDir/scripts/deps_versions.gradle"
+apply from: "$project.rootDir/scripts/api_keys.gradle"
 
 android {
     compileSdkVersion 30
@@ -19,6 +20,14 @@ android {
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles "consumer-rules.pro"
+    }
+
+    dataBinding {
+        enabled = true
+    }
+
+    buildTypes.each {
+        it.buildConfigField "String", "TMDB_API_KEY", tmdbApiKey
     }
 
     buildTypes {
@@ -51,4 +60,15 @@ dependencies {
     implementation dagger
     kapt daggerCompiler
     kapt daggerAnnotaionProcessor
+
+    //Rx
+    implementation rxJava
+    implementation rxAndroid
+    implementation rxKotlin
+
+    //Retrofit2
+    implementation retrofit
+
+    //ConstraintLayout
+    implementation constraintLayout
 }

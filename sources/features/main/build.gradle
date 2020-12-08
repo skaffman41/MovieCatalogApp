@@ -3,6 +3,7 @@ plugins {
     id 'kotlin-android'
     id 'kotlin-android-extensions'
     id 'kotlin-kapt'
+    id 'androidx.navigation.safeargs.kotlin'
 }
 
 apply from: "$project.rootDir/scripts/deps_versions.gradle"
@@ -70,22 +71,13 @@ dependencies {
     implementation rxAndroid
     implementation rxKotlin
 
-    //Rx
-    implementation rxJava
-
     //Retrofit2
     implementation retrofit
-    implementation rxJavaAdapter
-    implementation retrofitGsonConverter
 
-    //LoggingInterceptor
-    implementation loggingInterceptor
+    //Navigation
+    implementation navFragment
+    implementation navUi
 
-    //Gson
-    implementation gson
-
-    //OkHttp
-    implementation okhttp
-
-    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    //ConstraintLayout
+    implementation constraintLayout
 }
