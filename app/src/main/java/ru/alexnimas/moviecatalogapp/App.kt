@@ -5,7 +5,7 @@ import androidx.multidex.MultiDexApplication
 import ru.alexnimas.core_api.AppWithFacade
 import ru.alexnimas.core_api.ProvidersFacade
 import ru.alexnimas.moviecatalogapp.di.FacadeComponent
-import ru.alexnimas.sources.base.core.di.CurrentActivityProvider
+import ru.alexnimas.core_api.providers.CurrentActivityProvider
 
 class App : AppWithFacade, MultiDexApplication(), CurrentActivityProvider {
 

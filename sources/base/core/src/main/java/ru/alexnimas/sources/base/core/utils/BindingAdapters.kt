@@ -1,11 +1,11 @@
-package ru.alexnimas.core_api.utils
+package ru.alexnimas.sources.base.core.utils
 
 import android.view.View
 import android.widget.ImageView
 import androidx.databinding.BindingAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import ru.alexnimas.core_api.adapter.BaseBindingRVAdapter
+import ru.alexnimas.sources.base.core.adapter.BaseBindingRVAdapter
 
 @BindingAdapter("srcUrl")
 fun ImageView.bindImage(url: String?) {

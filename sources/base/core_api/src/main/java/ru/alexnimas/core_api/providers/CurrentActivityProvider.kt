@@ -1,8 +1,7 @@
-package ru.alexnimas.sources.base.core.di
+package ru.alexnimas.core_api.providers
 
 import androidx.appcompat.app.AppCompatActivity
 
 interface CurrentActivityProvider {
     var currentActivity: AppCompatActivity?
-    val isStarted: Boolean get() = currentActivity != null
 }

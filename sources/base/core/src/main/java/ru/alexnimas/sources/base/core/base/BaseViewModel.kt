@@ -5,7 +5,7 @@ import androidx.lifecycle.*
 import androidx.navigation.NavDirections
 import io.reactivex.disposables.CompositeDisposable
 import ru.alexnimas.core_api.NavigationCommand
-import ru.alexnimas.core_api.utils.SingleLiveEvent
+import ru.alexnimas.sources.base.core.utils.SingleLiveEvent
 
 abstract class BaseViewModel : ViewModel(), LifecycleObserver {
     val compositeDisposable = CompositeDisposable()

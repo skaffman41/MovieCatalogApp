@@ -1,4 +1,4 @@
-package ru.alexnimas.network.di
+package ru.alexnimas.core_impl.di
 
 import dagger.Component
 import ru.alexnimas.core_api.providers.NetworkProvider

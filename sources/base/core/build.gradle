@@ -63,4 +63,8 @@ dependencies {
     //Rx
     implementation rxJava
     implementation rxAndroid
+
+    //Glide
+    implementation glide
+    kapt glideCompiler
 }

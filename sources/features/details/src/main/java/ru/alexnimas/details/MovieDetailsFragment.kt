@@ -1,7 +1,5 @@
 package ru.alexnimas.details
 
-import android.os.Bundle
-import android.view.View
 import ru.alexnimas.core_api.AppWithFacade
 import ru.alexnimas.details.databinding.FragmentMovieDetailsBinding
 import ru.alexnimas.details.di.DetailsComponent

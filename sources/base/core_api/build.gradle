@@ -64,8 +64,4 @@ dependencies {
 
     //Retrofit2
     implementation retrofit
-
-    //Glide
-    implementation glide
-    kapt glideCompiler
 }

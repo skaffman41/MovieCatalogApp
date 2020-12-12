@@ -1,4 +1,4 @@
-package ru.alexnimas.core_api.adapter
+package ru.alexnimas.sources.base.core.adapter
 
 import androidx.recyclerview.widget.DiffUtil
 

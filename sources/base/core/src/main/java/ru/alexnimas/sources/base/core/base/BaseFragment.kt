@@ -10,11 +10,9 @@ import androidx.databinding.ViewDataBinding
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.LifecycleObserver
 import androidx.lifecycle.ViewModelProvider
-import androidx.navigation.NavBackStackEntry
 import androidx.navigation.fragment.findNavController
 import ru.alexnimas.core_api.NavigationCommand
-import ru.alexnimas.core_api.R
-import ru.alexnimas.core_api.di.ViewModelFactory
+import ru.alexnimas.sources.base.core.di.ViewModelFactory
 import javax.inject.Inject
 
 abstract class BaseFragment<VM : BaseViewModel, B : ViewDataBinding> : Fragment() {

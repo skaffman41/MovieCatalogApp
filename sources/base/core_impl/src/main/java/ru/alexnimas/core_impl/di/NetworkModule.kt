@@ -1,4 +1,4 @@
-package ru.alexnimas.network.di
+package ru.alexnimas.core_impl.di
 
 import dagger.Module
 import dagger.Provides
@@ -8,7 +8,7 @@ import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import retrofit2.converter.gson.GsonConverterFactory
-import ru.alexnimas.network.BuildConfig
+import ru.alexnimas.sources.base.core_impl.BuildConfig
 
 @Module
 class NetworkModule {

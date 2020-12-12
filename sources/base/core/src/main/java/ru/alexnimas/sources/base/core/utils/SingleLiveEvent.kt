@@ -1,4 +1,4 @@
-package ru.alexnimas.core_api.utils
+package ru.alexnimas.sources.base.core.utils
 
 import android.util.Log
 import androidx.annotation.MainThread

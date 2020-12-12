@@ -6,7 +6,7 @@ import ru.alexnimas.core_api.AppWithFacade
 import ru.alexnimas.core_api.dto.Movie
 import ru.alexnimas.main.databinding.FragmentMoviesListBinding
 import ru.alexnimas.main.di.MainComponent
-import ru.alexnimas.core_api.adapter.SimpleBindingRVAdapter
+import ru.alexnimas.sources.base.core.adapter.SimpleBindingRVAdapter
 import ru.alexnimas.sources.base.core.base.BaseFragment
 
 class MainFragment : BaseFragment<MainViewModel, FragmentMoviesListBinding>() {

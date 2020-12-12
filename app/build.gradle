@@ -42,7 +42,7 @@ android {
 
 dependencies {
     implementation project(':sources:base:core')
-    implementation project(':sources:base:network')
+    implementation project(':sources:base:core_impl')
     implementation project(':sources:features:actor')
     implementation project(':sources:features:details')
     implementation project(':sources:features:filter')

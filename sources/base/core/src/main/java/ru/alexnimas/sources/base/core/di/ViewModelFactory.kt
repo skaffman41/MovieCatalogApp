@@ -1,4 +1,4 @@
-package ru.alexnimas.core_api.di
+package ru.alexnimas.sources.base.core.di
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider

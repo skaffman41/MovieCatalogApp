@@ -2,7 +2,7 @@ package ru.alexnimas.moviecatalogapp
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import ru.alexnimas.sources.base.core.di.CurrentActivityProvider
+import ru.alexnimas.core_api.providers.CurrentActivityProvider
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
